@@ -1,0 +1,137 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html { 
+  font-size: 62.5%; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+	position: relative;
+	/*background-image: url(ocaso.jpg);*/
+	background-image: url(estrellado.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	height: 100%;
+}
+
+.tree {
+	width: 48%;
+	position: relative;
+}
+.wooden_sign1,
+.wooden_sign2,
+.wrapper-bublina {
+	position: absolute;
+}
+
+.wooden_sign1 {
+	width: 10%;
+	top: 33rem;
+	left: 23.5rem;
+    transform-origin: 50% 0%;
+    animation-name: swings;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+.wooden_sign2 {
+	width: 9%;
+	top: 27rem;
+	left: 56rem;
+    transform-origin: 50% 0%;
+    animation-name: swing;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+.wrapper-bublina {
+	right: 10%;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 300px;
+    height: 284px;
+}
+
+.bublina {
+	background-image: url(bublina.png);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+#bublina_T {
+    animation-name: b_margin_l;
+    animation-duration: 3.8s;
+    animation-delay: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+#bublina_T > div {
+    animation-name: b_margin_t;
+    animation-duration: 4.3s;
+    animation-delay: 1.7s;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 999px) {
+	.tree {
+		top: 50%;
+		transform: translateY(-50%);	
+	}
+	.wooden_sign1,
+	.wooden_sign2 {
+		display: none;
+	}
+}
+
+@keyframes swing {
+	25% { transform: rotate(-15deg); }	
+	50% { transform: rotate(15deg); }
+	75% { transform: rotate(-15deg); }	
+	100% { transform: rotate(1deg); }	
+}
+
+@keyframes swings {
+	25% { transform: rotate(15deg); }	
+	50% { transform: rotate(-15deg); }
+	75% { transform: rotate(15deg); }	
+	100% { transform: rotate(-2deg); }	
+}
+
+@keyframes b_margin_t {
+    0% {
+        margin: 0px 0 0 0;
+    }
+
+    50% {
+        margin: -20px 0 0 0;
+    }
+
+    100% {
+        margin: 0px 0 0 0;
+    }
+}
+
+@keyframes b_margin_l {
+    0% {
+        margin: 0 0 0 0px;
+    }
+
+    50% {
+        margin: 0 -20px 0 0;
+    }
+
+    100% {
+        margin: 0 0 0 0px;
+    }
+}
